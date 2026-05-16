@@ -1,0 +1,953 @@
+* {
+        margin: 0;
+        padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Welcome Section Styles */
+.welcome{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.welcome .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+/* styling the popup */
+.popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/* Navigation Links Styles */
+.welcome .nav .logo{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.welcome .nav .nav-links a{
+    color: #fff;
+    /* color: #800505; */
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;}
+.welcome .nav .nav-links a:hover{
+    text-decoration: underline;
+}
+
+/* Dropdown Menu Styles, i want it to be hidden by default */
+.welcome .nav .nav-links .dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.welcome .nav .nav-links .dropdown:hover .dropdown-content{
+    display: block;
+}
+.welcome .nav .nav-links .dropdown .dropdown-content a{
+    display: block;
+    color: #800505;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.welcome .nav .nav-links .dropdown .dropdown-content a:hover{
+    background-color: #555;
+    color: #fff;
+}
+/* the menu toggle button */
+.welcome .nav .menu-toggle{
+    display: none;
+    font-size:24px ;
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+.main-content{
+    margin-top: 20px;
+}
+.main-content h1{
+    color: #333;
+}
+.main-content p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --left-sidebar-- */
+.left-sidebar{
+    width: 200px;
+    background-color: #3b3b36;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(98, 115, 14, 0.1);
+    float: left;
+    height: 100vh;
+    /* position: sticky; */
+}
+.left-sidebar h2{
+    color: #fff;
+    margin-top: 0;
+}
+.left-sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+.left-sidebar ul li{
+    margin-bottom: 10px;
+}
+.left-sidebar ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.left-sidebar ul li a:hover{
+    text-decoration: underline;
+}
+
+/* --hero-- */
+.hero{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    height: 100vh;
+    background-image: url(assembly2.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.hero h1{
+    color: #fff;
+    font-size: 48px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+.hero h1:hover{
+    transform: scale(1.1);
+}
+.hero p{
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero .btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero .btn:hover{
+    background-color: #555;
+}
+
+/* about us section */
+.boxes{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.boxes .hd{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.boxes .hd h2{
+    font-size: 32px;
+    margin: 0;
+}
+.boxes .hd p{
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+/* Boxes Section Styles */
+.boxes{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.boxes .box{
+    margin: 10px;
+    width: 30%;
+    background-color: #e5e6e1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(240, 241, 236, 0.1);
+
+}
+
+.boxes .box h3{
+    color: #333;
+    margin-top: 0;
+}
+.boxes .box p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+.form-container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.form-container h2{
+    color: #333;
+    margin-top: 0;
+}
+.form-container label{
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-container input,
+.form-container select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-container button:hover{
+    background-color: #555;
+}
+
+/* --head-teacher section-- */
+.admins{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.admins .hd{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.admins .hd h1{
+    font-size: 32px;
+    margin: 0;
+}
+.admins .hd p{
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+.admin-profile{
+    display: flex;
+    align-items: center;
+}
+.admin-profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.admin-profile h2{
+    color: #333;
+    margin: 0;
+}
+.admin-profile p{
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/*  transition of the boxes */
+.boxes .box{
+    transition: transform 0.3s ease;
+}
+.boxes .box:hover{
+    transform: translateY(-10px);
+}
+
+
+/* Recent Activities Section */
+.recent-activities{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.recent-activities .hd{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.recent-activities .hd h1{
+    font-size: 32px;
+    margin: 0;
+}
+.recent-activities .hd p{
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+.recent-activities .activity,
+.recent-activities .sport{
+    margin-bottom: 20px;
+}
+.recent-activities .activity img,
+.recent-activities .sport img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.recent-activities .activity h2,
+.recent-activities .sport h2{
+    color: #333;
+    margin-top: 0;
+}
+.recent-activities .activity p,
+.recent-activities .sport p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* News Section Styles */
+.news{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.news .hd{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.news .hd h2{
+    font-size: 32px;
+    margin: 0;
+}
+.news .hd p{
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+.news .news-item{
+    margin-bottom: 20px;
+}
+.news .news-item h2{
+    color: #333;
+    margin-top: 0;
+}
+.news .news-item p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* footer styles */
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
+}
+footer .social-media a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer .social-media a:hover{
+    text-decoration: underline;
+}
+
+
+/* ABOUT US */
+.school-view{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(school-view.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+.about{
+    width: 100vw;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.about .hd{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.about .hd h1{
+    font-size: 32px;
+    margin: 0;
+}
+.about .hd p{
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+.about .box{
+    margin: 10px;
+    background-color: #e5e6e1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(240, 241, 236, 0.1);
+}
+.about .box h2{
+    color: #333;
+    margin-top: 0;
+}
+.about .box p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* services offered */
+.services{
+    width: 100vw;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.services .hd{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.services .hd h1{
+    font-size: 32px;
+    margin: 0;
+}
+.services .hd p{
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+/* services content */
+.services .content{
+    display: flex;
+    justify-content: space-between;
+}
+.services .content .img{
+    width: 30%;
+}
+.services .content .img img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.services .content .text{
+    width: 65%;
+}
+.services .content .text h2{
+    color: #0a0303;
+    margin-top: 0;
+}
+.services .content .text p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --academics-- */
+.heroin {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    height: 100vh;
+    background-image: url(scouts\ club.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.heroin h1{
+    color: #fff;
+    font-size: 48px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.heroin p{
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.heroin .departments{
+    margin-top: 20px;
+}
+.heroin .departments .box1,
+.heroin .departments .box2,
+.heroin .departments .box3
+{
+    background-color: #e5e6e1;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(240, 241, 236, 0.1);
+}
+.heroin .departments .box1 h2,
+.heroin .departments .box2 h2,
+.heroin .departments .box3 h2{
+    color: #333;
+    margin-top: 0;
+}
+.heroin .departments .box1 p,
+.heroin .departments .box2 p,
+.heroin .departments .box3 p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* levels */
+.levels{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.levels .olevel{
+    margin-bottom: 20px;
+}
+.levels .alevel{
+    margin-bottom: 20px;
+}
+
+.levels .olevel .image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: auto;
+}
+.levels .alevel .image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.levels .olevel .text h2,
+.levels .alevel .text h2{
+    color: #333;
+    margin-top: 0;
+}
+.levels .olevel .text p,
+.levels .alevel .text p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --ADMISSIONS-- */
+.form-container{
+    background-color: #fff;
+    padding: 80px 95px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin: 30px 54px;
+    /* width: 100vw; */
+    max-width: 70vw;
+    height: 70vh;
+}
+.form-container h1{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+.form-container form label{
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-container form input,
+.form-container form select,
+.form-container form button{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container form button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.form-container form button:hover{
+    background-color: #555;
+}
+
+/* --contact us-- */
+.contact{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.contact h1{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact form label{
+    margin-bottom: 5px;
+    color: #333;
+}
+.contact form input,
+.contact form textarea,
+.contact form button{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact form button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.contact form button:hover{
+    background-color: #555;
+}
+
+/* ANIMATING IMAGES IN THE ABOUT SECTION */
+.gallery{
+    display: block;
+    justify-content: space-between;
+}
+.gallery img{
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    animation: fade 2s infinite;
+}
+@keyframes fade {
+    0% {opacity: 1;}
+
+    100% {opacity: 1;}
+}
+
+#topBtn{
+    background-color:#666;
+    color: #f0f0f0;
+    box-shadow: 3px 3px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+}
+#topBtn:hover{
+    background-color: #333;
+    color: #fff;
+    box-shadow: 5px 5px rgba(0,0,0,0.7);
+}
+#topBtn i{
+    font-size: 20px;
+}
+
+/* animating the hero section with images slide show */
+.main .hero{
+    animation: slide 40s infinite;
+}
+@keyframes slide {
+    0% {background-image: url(assembly2.jpg);}
+    15% {background-image: url(scouts\ club.jpg);}
+    20% {background-image: url(new-school-bus.jpg);}
+    25% {background-image: url(mdd.jpg);}
+    40% {background-image: url(school-gymnasium.jpg);}
+    50% {background-image: url(religious-leaders.jpg);}
+    /* 60% {background-image: url(school-sports-field.jpg);} */
+    75% {background-image: url(main-campus.jpg);}
+    /* 80% {background-image: url(school-cafeteria.jpg);} */
+    100% {background-image: url(class.jpg);}
+}   
+
+
+/* responsive design */
+/* including max-width */
+@media screen and (max-width: 480px) {
+    .welcome .nav .logo{
+        font-size: 20px;
+        max-width:100%;
+    }
+    .welcome .nav .nav-links a{
+        margin-left: 10px;
+        font-size: 14px;
+        max-width:100%;
+    }
+    
+    .main-content h1{
+        font-size: 24px;
+    }
+    .main-content p{
+        font-size: 14px;
+    }
+    .boxes .hd h2{
+        font-size: 24px;
+    }
+    .boxes .hd p{
+        font-size: 14px;
+    }
+    .boxes .box h3{
+        font-size: 18px;
+    }
+    .boxes .box p{
+        font-size: 14px;
+    }
+    .admins .hd h1{
+        font-size: 24px;
+    }
+    .admins .hd p{
+        font-size: 10px;
+    }
+    .admin-profile h2{
+        font-size: 18px;
+    }
+    .admin-profile p{
+        font-size: 14px;
+    }
+    .recent-activities .activity h2,
+    .recent-activities .sport h2{
+        font-size: 18px;
+    }
+    .recent-activities .activity p,
+    .recent-activities .sport p{
+        font-size: 14px;
+    }
+    .news .news-item h2{
+        font-size: 18px;
+    }   
+    .news .news-item p{
+        font-size: 14px;
+    }
+    .heroin h1{
+        font-size: 24px;
+    }
+    .heroin p{
+        font-size: 14px;
+    }
+    .heroin .departments .box1 h2,
+    .heroin .departments .box2 h2,
+    .heroin .departments .box3 h2{
+        font-size: 18px;
+    }   
+    .heroin .departments .box1 p,
+    .heroin .departments .box2 p,
+    .heroin .departments .box3 p{
+        font-size: 14px;
+    }
+    .levels .olevel .text h2,
+    .levels .alevel .text h2{
+        font-size: 18px;
+    }
+    .levels .olevel .text p,
+    .levels .alevel .text p{
+        font-size: 14px;
+    }
+    .form-container h1{
+        font-size: 24px;
+    }
+    .form-container form label{
+        font-size: 14px;
+    }   
+    .form-container form input,
+    .form-container form select,
+    .form-container form button{
+        font-size: 14px;
+    }
+    .contact h1{
+        font-size: 24px;
+    }
+    .contact form label{
+        font-size: 14px;
+    }
+    .contact form input,
+    .contact form textarea,
+    .contact form button{
+        font-size: 14px;
+    }
+    /* ignoring the left side bar when the screen is small */
+    .left-sidebar{
+        display: none;
+    }
+    .main .hero{
+        height: auto;
+        max-width: 300px;
+    }
+
+}
+
+/* responsive design for the navigation */
+@media screen and (max-width: 768px) {
+    .welcome .nav .nav-links{
+        display: block;
+        max-width: 100%;
+    }
+    .welcome .nav .menu-toggle{
+        display: block;
+    }
+    
+
+}
+
+/* animated counter */
+.counter{
+    display: flex;
+    justify-content: space-around;
+    margin: 200px 30px;
+}
+.counter-item h2{
+    text-align: center;
+    font-size: 50px;
+    color: #240909;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.counter-item p{
+    font-size: 30px;
+    color: #201111;
+}
+
+/* animated counter box */
+.counter .box{
+    background: #c1b3b3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* form validation */
+.form-container .error {
+    color: #d32f2f;
+    font-size: 14px;
+    display: none;
+}
+
+
+
+/* responsive design for the animated counter */
+@media screen and (max-width: 768px) {
+    .counter{
+        flex-direction: row;
+        align-items: center;
+    }
+    .counter .box{
+        margin-bottom: 20px;
+        max-width: 300px;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    .counter-item h2{
+        font-size: 30px;
+    }
+    .counter-item p{
+        font-size: 18px;
+    }
+}
+
+/* responsive design for the animated counter on small screens */
+@media screen and (max-width: 480px) {
+    .counter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .counter .box{
+        margin-bottom: 20px;
+        max-width: 300px;
+        margin-right: 10px;
+    }
+    .counter-item h2{
+        font-size: 25px;
+    }
+    .counter-item p{
+        font-size: 14px;
+    }
+}

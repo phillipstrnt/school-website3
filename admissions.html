@@ -1,0 +1,146 @@
+<!-- this is a school website -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+ <body>
+    <!-- welcome to our school website -->
+     <section class="welcome">
+        <div class="nav">
+            <div class="logo">MACOS</div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i>About Us</a>
+                <a href="admissions.html"><i class="fa-solid fa-user-graduate"></i>Admissions</a>
+
+                <!-- academics dropdown menu -->
+                <a href="academics.html"><i class="fa-solid fa-graduation-cap"></i>Academics</a>
+            </div>
+        </div>
+        <!-- main content area containing the side bar -->
+        <!-- <div class="main">
+            <div class="hero">
+                <h1>Welcome to MAKERERE COLLEGE SCHOOL</h1>
+                <p>--BE KNOWN BY WORKS.--AND ONLY GOOD WORKS</p>
+
+                <button class="btn">Learn More</button>
+
+            </div>
+        </div> -->
+     </section>
+
+     <section class="form-container">
+         <h2><strong>ADMISSIONS FORM</strong></h2>
+         <!-- form -->
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error" id="nameError">Please enter your full name.</div>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError">Please enter a valid email address.</div>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="error" id="phoneError">Please enter a valid phone number.</div>
+    
+                <label for="grade">Grade Applying For:</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="grade1">Grade 1</option>
+                    <option value="grade2">Grade 2</option>
+                    <option value="grade3">Grade 3</option>
+                    <!-- add more grades as needed -->  
+                </select>
+                <div class="error" id="gradeError">Please select a grade.</div>
+
+                <div class="payments">
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="card">Credit Card</option>
+                        <option value="cash">Cash</option>
+                    </select>
+                </div>
+
+                <button type="submit">Submit Application</button>
+     </section>
+
+        <!-- this is the footer section -->
+        <footer>
+            <p>&copy; 2026 MAKERERE COLLEGE SCHOOL. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            </div>
+        </footer>
+        <!-- script -->
+        <script>
+            // form validation
+            const form = document.querySelector('form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const gradeSelect = document.getElementById('grade');
+            // hiding error messages initially
+            document.getElementById('nameError').style.display = 'none';
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('phoneError').style.display = 'none';
+            document.getElementById('gradeError').style.display = 'none';
+
+            form.addEventListener('submit', function(event) {
+                let isValid = true;
+
+                // validate name
+                if (nameInput.value.trim() === '') {
+                    isValid = false;
+                    document.getElementById('nameError').style.display = 'block';
+                } else {
+                    document.getElementById('nameError').style.display = 'none';
+                }
+
+                // validate email
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value.trim())) {
+                    isValid = false;
+                    document.getElementById('emailError').style.display = 'block';
+                } else {
+                    document.getElementById('emailError').style.display = 'none';
+                }
+
+                // validate phone
+                const phonePattern = /^\d{10}$/; // simple pattern for 10 digit phone numbers
+                if (!phonePattern.test(phoneInput.value.trim())) {
+                    isValid = false;
+                    document.getElementById('phoneError').style.display = 'block';
+                } else {
+                    document.getElementById('phoneError').style.display = 'none';
+                }
+
+                // validate grade selection
+                if (gradeSelect.value === '') {
+                    isValid = false;
+                    document.getElementById('gradeError').style.display = 'block';
+                } else {
+                    document.getElementById('gradeError').style.display = 'none';
+                }
+
+                // prevent form submission if validation fails
+                if (!isValid) {
+                    event.preventDefault();
+                }
+            });
+            
+        </script>
+
+ </body>
+ </html>
