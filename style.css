@@ -4,6 +4,11 @@
     box-sizing: border-box;
 
 }
+/* prevention of horizontal scroll */
+
+html, body{
+    overflow-x: hidden;
+}
 
 body{
     background-color: #f0f0f0;
